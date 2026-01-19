@@ -2,6 +2,7 @@
 
 Based on the original work by **[Ankur](https://github.com/originalankur)**.
 Original Repository: **[maptoposter](https://github.com/originalankur/maptoposter)**
+Vibe coding with **Google Antigravity** and **Gemini**.
 
 ## Docker Usage
 
