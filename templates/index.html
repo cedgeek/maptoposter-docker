@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapToPoster</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>MapToPoster Generator</h1>
+        <div class="main-content">
+            <div class="card control-panel">
+                <form id="mapForm">
+                    <label>Ville <input type="text" id="city" placeholder="ex: Port Louis" required></label>
+                    <label>Pays <input type="text" id="country" placeholder="ex: Mauritius" required></label>
+                    <label>Thème
+                        <select id="theme">
+                            {% for theme in themes %}<option value="{{ theme }}">{{ theme }}</option>{% endfor %}
+                        </select>
+                    </label>
+                    <label>Zoom (<span id="radiusVal">15</span> km)
+                        <input type="range" id="radius" min="1000" max="50000" step="1000" value="15000">
+                    </label>
+                    <button type="submit" id="generateBtn">Générer la Carte</button>
+                    <div id="errorMsg" class="error"></div>
+                </form>
+            </div>
+            <div class="card result-panel">
+                <div id="loader" class="hidden">🔄 Génération en cours... (Patience)</div>
+                <img id="resultImage" class="hidden">
+                <a id="downloadLink" href="#" class="btn-download hidden">⬇️ Télécharger PNG</a>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
