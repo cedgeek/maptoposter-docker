@@ -1,5 +1,5 @@
 # --- STAGE 1 : BUILDER (L'image de travail) ---
-FROM python:3.10-slim as builder
+FROM python:3.11-slim as builder
 
 # 1. Install des outils de compilation (LOURD mais nécessaire uniquement ici)
 RUN apt-get update && apt-get install -y \
