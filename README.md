@@ -1,24 +1,8 @@
-# City Map Poster Generator
+## Credits
 
-Generate beautiful, minimalist map posters for any city in the world.
-
-<img src="posters/singapore_neon_cyberpunk_20260108_184503.png" width="250">
-<img src="posters/dubai_midnight_blue_20260108_174920.png" width="250">
-
-## Examples
-
-
-| Country      | City           | Theme           | Poster |
-|:------------:|:--------------:|:---------------:|:------:|
-| USA          | San Francisco  | sunset          | <img src="posters/san_francisco_sunset_20260108_184122.png" width="250"> |
-| Spain        | Barcelona      | warm_beige      | <img src="posters/barcelona_warm_beige_20260108_172924.png" width="250"> |
-| Italy        | Venice         | blueprint       | <img src="posters/venice_blueprint_20260108_165527.png" width="250"> |
-| Japan        | Tokyo          | japanese_ink    | <img src="posters/tokyo_japanese_ink_20260108_165830.png" width="250"> |
-| India        | Mumbai         | contrast_zones  | <img src="posters/mumbai_contrast_zones_20260108_170325.png" width="250"> |
-| Morocco      | Marrakech      | terracotta      | <img src="posters/marrakech_terracotta_20260108_180821.png" width="250"> |
-| Singapore    | Singapore      | neon_cyberpunk  | <img src="posters/singapore_neon_cyberpunk_20260108_184503.png" width="250"> |
-| Australia    | Melbourne      | forest          | <img src="posters/melbourne_forest_20260108_181459.png" width="250"> |
-| UAE          | Dubai          | midnight_blue   | <img src="posters/dubai_midnight_blue_20260108_174920.png" width="250"> |
+Based on the original work by **[Ankur](https://github.com/originalankur)**.
+Original Repository: **[maptoposter](https://github.com/originalankur/maptoposter)**
+Vibe coding with **Google Antigravity** and **Gemini**.
 
 ## Docker Usage
 
@@ -69,6 +53,29 @@ docker run -p 5025:5025 -v $(pwd)/posters:/app/posters maptoposter
 Once the container is running (via Docker Compose or Docker CLI), access the web interface at:
 
 **http://localhost:5025**
+
+# City Map Poster Generator
+
+Generate beautiful, minimalist map posters for any city in the world.
+
+<img src="posters/singapore_neon_cyberpunk_20260108_184503.png" width="250">
+<img src="posters/dubai_midnight_blue_20260108_174920.png" width="250">
+
+## Examples
+
+
+| Country      | City           | Theme           | Poster |
+|:------------:|:--------------:|:---------------:|:------:|
+| USA          | San Francisco  | sunset          | <img src="posters/san_francisco_sunset_20260108_184122.png" width="250"> |
+| Spain        | Barcelona      | warm_beige      | <img src="posters/barcelona_warm_beige_20260108_172924.png" width="250"> |
+| Italy        | Venice         | blueprint       | <img src="posters/venice_blueprint_20260108_165527.png" width="250"> |
+| Japan        | Tokyo          | japanese_ink    | <img src="posters/tokyo_japanese_ink_20260108_165830.png" width="250"> |
+| India        | Mumbai         | contrast_zones  | <img src="posters/mumbai_contrast_zones_20260108_170325.png" width="250"> |
+| Morocco      | Marrakech      | terracotta      | <img src="posters/marrakech_terracotta_20260108_180821.png" width="250"> |
+| Singapore    | Singapore      | neon_cyberpunk  | <img src="posters/singapore_neon_cyberpunk_20260108_184503.png" width="250"> |
+| Australia    | Melbourne      | forest          | <img src="posters/melbourne_forest_20260108_181459.png" width="250"> |
+| UAE          | Dubai          | midnight_blue   | <img src="posters/dubai_midnight_blue_20260108_174920.png" width="250"> |
+
 
 ## Installation (Python CLI)
 
@@ -303,7 +310,4 @@ G = ox.graph_from_point(point, dist=dist, network_type='walk')   # pedestrian
 - Use `network_type='drive'` instead of `'all'` for faster renders
 - Reduce `dpi` from 300 to 150 for quick previews
 
-## Credits
 
-Based on the original work by **[Ankur](https://github.com/originalankur)**.
-Original Repository: **[maptoposter](https://github.com/originalankur/maptoposter)**
