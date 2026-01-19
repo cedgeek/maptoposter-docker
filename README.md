@@ -15,7 +15,7 @@ version: '3.8'
 
 services:
   maptoposter:
-    image: ghcr.io/cthonney/maptoposter-docker:latest
+    build: .
     container_name: maptoposter
     ports:
       - "5025:5025"
@@ -25,11 +25,10 @@ services:
     restart: unless-stopped
 ```
 
-
 To start the web application:
 
 ```bash
-docker-compose up -d
+docker-compose up -d --build
 ```
 
 Access the application at `http://localhost:5025`.

@@ -15,7 +15,7 @@ RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 # 3. Ultra-light clone (without history)
-RUN git clone --depth 1 https://github.com/cthonney/maptoposter-docker.git .
+RUN git clone --depth 1 https://github.com/originalankur/maptoposter.git .
 
 # 4. Install deps (Works well with Py 3.11)
 RUN pip install --no-cache-dir -r requirements.txt
