@@ -1,3 +1,4 @@
 cache/*
 env/
 .env/
+PULL_REQUEST_TEMPLATE.md

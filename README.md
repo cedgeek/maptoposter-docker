@@ -1,58 +1,3 @@
-## Credits
-
-Based on the original work by **[Ankur](https://github.com/originalankur)**.  
-Original Repository: **[maptoposter](https://github.com/originalankur/maptoposter)**  
-Vibe coding with **Google Antigravity** and **Gemini**.
-
-## Docker Usage
-
-### Using Docker Compose (Recommended)
-
-Create a `docker-compose.yml` file:
-
-```yaml
-version: '3.8'
-
-services:
-  maptoposter:
-    build: .
-    container_name: maptoposter
-    ports:
-      - "5025:5025"
-    volumes:
-      # Local directory to retrieve generated PNGs
-      - ./posters:/app/posters
-    restart: unless-stopped
-```
-
-To start the web application:
-
-```bash
-docker-compose up -d --build
-```
-
-Access the application at `http://localhost:5025`.
-
-### Using Docker CLI
-
-Build the image:
-
-```bash
-docker build -t maptoposter .
-```
-
-Run the container:
-
-```bash
-docker run -p 5025:5025 -v $(pwd)/posters:/app/posters maptoposter
-```
-
-### Accessing the Application
-
-Once the container is running (via Docker Compose or Docker CLI), access the web interface at:
-
-**http://localhost:5025**
-
 # City Map Poster Generator
 
 Generate beautiful, minimalist map posters for any city in the world.
@@ -310,3 +255,57 @@ G = ox.graph_from_point(point, dist=dist, network_type='walk')   # pedestrian
 - Reduce `dpi` from 300 to 150 for quick previews
 
 
+## Credits For Dockerization
+
+**[Cédric ](https://github.com/cthonney/)**.  
+
+Vibe coding with **Google Antigravity** and **Gemini**.
+
+## Docker Usage
+
+### Using Docker Compose (Recommended)
+
+Create a `docker-compose.yml` file:
+
+```yaml
+version: '3.8'
+
+services:
+  maptoposter:
+    build: .
+    container_name: maptoposter
+    ports:
+      - "5025:5025"
+    volumes:
+      # Local directory to retrieve generated PNGs
+      - ./posters:/app/posters
+    restart: unless-stopped
+```
+
+To start the web application:
+
+```bash
+docker-compose up -d --build
+```
+
+Access the application at `http://localhost:5025`.
+
+### Using Docker CLI
+
+Build the image:
+
+```bash
+docker build -t maptoposter .
+```
+
+Run the container:
+
+```bash
+docker run -p 5025:5025 -v $(pwd)/posters:/app/posters maptoposter
+```
+
+### Accessing the Application
+
+Once the container is running (via Docker Compose or Docker CLI), access the web interface at:
+
+**http://localhost:5025**
